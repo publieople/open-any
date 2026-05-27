@@ -1,0 +1,12 @@
+workflow: full
+phase: verify
+design_doc: docs/superpowers/specs/2026-05-27-openany-architecture.md
+plan: docs/superpowers/plans/2026-05-27-openany-phase1.md
+build_mode: null
+isolation: branch
+verify_mode: light
+verify_result: pending
+verification_report: null
+branch_status: pending
+verified_at: null
+archived: false
