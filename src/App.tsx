@@ -5,6 +5,9 @@ import { handler as jsonHandler } from './handlers/json';
 import { handler as markdownHandler } from './handlers/markdown';
 import { handler as yamlHandler } from './handlers/yaml';
 import { handler as hexHandler } from './handlers/hex';
+import { handler as imageHandler } from './handlers/image';
+import { handler as svgHandler } from './handlers/svg';
+import { handler as csvHandler } from './handlers/csv';
 import FilePicker from './components/FilePicker';
 import FileTabs from './components/FileTabs';
 import Toolbar from './components/Toolbar';
@@ -19,11 +22,14 @@ function App() {
 
   // Register all handlers on mount
   useEffect(() => {
-    registerHandler(textHandler);
-    registerHandler(jsonHandler);
-    registerHandler(markdownHandler);
-    registerHandler(yamlHandler);
-    registerHandler(hexHandler);
+    registerHandler(hexHandler);       // catch-all
+    registerHandler(svgHandler);       // svg before text
+    registerHandler(imageHandler);     // images
+    registerHandler(csvHandler);       // csv/tsv
+    registerHandler(markdownHandler);  // md
+    registerHandler(jsonHandler);      // json
+    registerHandler(yamlHandler);      // yaml/toml
+    registerHandler(textHandler);      // text/code (generic, last)
   }, [registerHandler]);
 
   const activeFile: FileTab | undefined = useMemo(

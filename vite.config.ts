@@ -34,6 +34,9 @@ export default defineConfig({
           if (id.includes('node_modules/codemirror') || id.includes('node_modules/@codemirror/')) return 'vendor-codemirror'
           if (id.includes('node_modules/vanilla-jsoneditor')) return 'vendor-jsoneditor'
           if (id.includes('node_modules/@mdxeditor/editor')) return 'vendor-mdxeditor'
+          if (id.includes('node_modules/tui-image-editor') || id.includes('node_modules/fabric')) return 'vendor-image'
+          if (id.includes('node_modules/papaparse')) return 'vendor-csv'
+          if (id.includes('node_modules/@tanstack/react-table')) return 'vendor-table'
         },
       },
     },

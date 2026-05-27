@@ -1,7 +1,7 @@
 workflow: full
-phase: archive
-design_doc: docs/superpowers/specs/2026-05-27-openany-architecture.md
-plan: docs/superpowers/plans/2026-05-27-openany-phase1.md
+phase: build
+design_doc: docs/superpowers/specs/2026-05-27-openany-phase2-design.md
+plan: docs/superpowers/plans/2026-05-27-openany-phase2.md
 build_mode: null
 isolation: branch
 verify_mode: light
